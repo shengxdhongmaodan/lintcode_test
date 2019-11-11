@@ -31,9 +31,9 @@ recursion(i) {
 挑战
 用递归完成，而非循环的方式。
 """
-import sys
+# import sys
 import array
-sys.setrecursionlimit(9000000)  # 这里设置大一些
+# sys.setrecursionlimit(9000000)  # 这里设置大一些
 
 class Solution:
     """
@@ -62,13 +62,23 @@ class Solution:
         return self.int_array
 
     def get_numbers(self, num):
-        if num > self.largest_num:
+        if self.largest_num < 10000:
+            for i in range(num, self.largest_num):
+                self.int_array.append(i)
             return
-        if 1 <= num <= self.largest_num:
-            self.int_array.append(num)
-            self.get_numbers(num + 1)
-
-
+        else:
+            if num > self.largest_num:
+                return
+            if 1 <= num <= self.largest_num:
+                for i in range(num, num + 10000):
+                    self.int_array.append(i)
+                num = self.int_array[-1]
+                if self.largest_num - num <= 10000:
+                    for i in range(num+1, self.largest_num+1):
+                        self.int_array.append(i)
+                    return
+                else:
+                    self.get_numbers(num + 1)
 
 
 if __name__ == "__main__":
