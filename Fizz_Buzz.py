@@ -21,9 +21,9 @@ import os
 module = ""
 case = "Fizz_Buzz"
 # 列表推导式
-res = [[[str(i),'buzz'][i%5==0],['fizz','fizz buzz'][i%5==0]][i%3==0] for i in range(1,16)]
+res = [[[str(i), 'buzz'][ i%5==0], ['fizz', 'fizz buzz'][i%5==0]][i%3==0] for i in range(1,16)]
 str_list = []
-for i in range(1,16):
+for i in range(1, 16):
     if i%3 == 0:
         if i%5 == 0:
             str_list.append('fizz buzz')
