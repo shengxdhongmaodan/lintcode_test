@@ -35,6 +35,7 @@ recursion(i) {
 import array
 # sys.setrecursionlimit(9000000)  # 这里设置大一些
 
+
 class Solution:
     """
     @param n: An integer
