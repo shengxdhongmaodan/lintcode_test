@@ -62,19 +62,24 @@ class Solution:
             link_node.val = val_list[i]
             p.next = link_node
             p = p.next
-        q = head_node
-        if q.val == node:
-            head_node = q.next
+
+        if head_node.val == node.val:
+            head_node = head_node.next
             return head_node
-        while q:
-            if q.next.val == node:
-                q.next = q.next.next
-                break
-            else:
-                q = q.next
+        else:
+            p = head_node
+            q = p.next
+            while q:
+                if q.val == node.val:
+                    p.next = q.next
+                    break
+                else:
+                    p = q
+                    q = q.next
         return head_node
 
 
 if __name__ == "__main__":
     s = Solution()
-    s.deleteNode(1)
+    node = ListNode(3)
+    s.deleteNode(node)
