@@ -19,22 +19,21 @@ module = ""
 case = "narcissistic_number"
 
 
-
 def get_narcissistic_number(n):
     result_list = []
     if n == 1:
         for j in range(10):
-            if j == pow(j,n):
+            if j == pow(j, n):
                 result_list.append(j)
     if n == 2:
-        for i in range(1,10):
+        for i in range(1, 10):
             for j in range(10):
                 value = i*10 + j
-                match_value = pow(i,n) + pow(j,n)
+                match_value = pow(i, n) + pow(j, n)
                 if value == match_value:
                     result_list.append(value)
     if n == 3:
-        for k in range(1,10):
+        for k in range(1, 10):
             for i in range(10):
                 for j in range(10):
                     value = k*100 + i * 10 + j
