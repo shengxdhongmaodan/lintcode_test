@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 """
 @author  : shengxd
-@Contact : shengxd@huahuan.com
+@Contact : 740693424@qq.com
 @File    :   Fizz_Buzz.py
 @Time    :   2019/11/5 18:53
 @Desc    :
